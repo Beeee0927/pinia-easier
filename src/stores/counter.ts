@@ -1,12 +1,13 @@
 import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import { aref, defineStoreProxy } from 'packages/lib/storeProxy'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
+export const counterStore = defineStoreProxy('counter', () => {
+  return {
+    count: aref(0, (ctx) => ({
+      doubleCount: computed(() => ctx.value * 2),
+      increment() {
+        ctx.value++
+      }
+    }))
   }
-
-  return { count, doubleCount, increment }
 })
