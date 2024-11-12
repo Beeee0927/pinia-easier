@@ -1,9 +1,19 @@
-import { ref, computed } from 'vue'
-import { aref, defineStoreProxy } from 'packages/lib/storeProxy'
+import { computed } from 'vue'
+import { defineStoreProxy } from '../../lib/storeProxy'
+import { aref } from 'lib/aref'
+
+// export const counterProxy = defineStoreProxy('counter', () => {
+//   const num = ref(0)
+//   const doubleCount = computed(() => num.value * 2)
+//   function increment() {
+//     num.value++
+//   }
+//   return { num, doubleCount, increment }
+// })
 
 export const counterStore = defineStoreProxy('counter', () => {
   return {
-    count: aref(0, (ctx) => ({
+    num: aref(0, (ctx) => ({
       doubleCount: computed(() => ctx.value * 2),
       increment() {
         ctx.value++

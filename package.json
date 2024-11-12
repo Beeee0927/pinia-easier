@@ -1,8 +1,25 @@
 {
   "name": "pinia-easier",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A plugin help to use pinia more easily",
   "type": "module",
+  "main": "lib/index.ts",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "Vue3",
+    "pinia"
+  ],
+  "author": {
+    "email": "1572255051@qq.com",
+    "name": "Beeee0927",
+    "url": "https://github.com/Beeee0927"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beeee0927/pinia-easier"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
