@@ -26,6 +26,9 @@ importers:
       pinia:
         specifier: ^2.3.1
         version: 2.3.1(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      pinia-easier:
+        specifier: ^2.0.0
+        version: 2.0.0(pinia@2.3.1(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
       rollup:
         specifier: ^4.30.1
         version: 4.30.1
@@ -591,6 +594,12 @@ packages:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
     hasBin: true
+
+  pinia-easier@2.0.0:
+    resolution: {integrity: sha512-0SHLjp0bbnWU8pNvm9OQHVw9bkzlUVn7R/W4M8TnEQGmlBikHjScx/FxjBR7PSBmkQOU8woA+wU0dZ/URHJ13g==}
+    peerDependencies:
+      pinia: '>=2.0.0'
+      vue: '>=3.0.0'
 
   pinia@2.3.1:
     resolution: {integrity: sha512-khUlZSwt9xXCaTbbxFYBKDc/bWAGWJjOgvxETwkTN7KRm66EeT1ZdZj6i2ceh9sP2Pzqsbc704r2yngBrxBVug==}
@@ -1228,6 +1237,11 @@ snapshots:
   picomatch@2.3.1: {}
 
   pidtree@0.6.0: {}
+
+  pinia-easier@2.0.0(pinia@2.3.1(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3)):
+    dependencies:
+      pinia: 2.3.1(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      vue: 3.5.13(typescript@5.6.3)
 
   pinia@2.3.1(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)):
     dependencies:

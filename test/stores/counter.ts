@@ -1,5 +1,6 @@
 import { computed, ref } from 'vue'
-import { defineStoreProxy } from '../../src/storeProxy'
+// import { defineStoreProxy } from '../../src/storeProxy'
+import { defineStoreProxy } from 'pinia-easier'
 
 export const counterProxy = defineStoreProxy('counter', () => {
   const num = ref(0)

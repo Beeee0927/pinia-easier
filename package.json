@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "keywords": [
     "Vue3",
     "pinia"
@@ -28,8 +31,8 @@
     "type-check": "vue-tsc --build --force"
   },
   "peerDependencies": {
-    "vue": ">=3.0.0",
-    "pinia": ">=2.0.0"
+    "pinia": ">=2.0.0",
+    "vue": ">=3.0.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
@@ -38,6 +41,7 @@
     "@vue/tsconfig": "^0.5.1",
     "npm-run-all2": "^7.0.1",
     "pinia": "^2.3.1",
+    "pinia-easier": "^2.0.0",
     "rollup": "^4.30.1",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-terser": "^7.0.2",
